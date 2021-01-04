@@ -1,0 +1,264 @@
+CSS{
+    USE of css class to style elements 
+    classes are reusable style that can be added 
+    to html elements 
+    <h1 class="blue-text">hello</h1>
+    <style>
+  .blue-text {
+    color: blue;
+  }
+    </style
+    you can see that we have created a css class called blue-text
+    within the <style> tag
+    NOTE:in your css style class names start with 
+    a period or [.]
+    
+}
+style multiple elements with a css class{
+    classes allow you to use the same css style on  multiple
+    html elements 
+    just specify thesame classs to different elements
+    they will get same characteristics
+
+}
+fonts{
+    font size is controlled by the font-size css property
+    h1{
+        font-size:30px
+    }
+    set the font family of an elements
+    use the font family property
+    h1{
+        font-family:san-serif;
+    }
+    Import google fonts{
+        in addition to specyfying common fonts that 
+        are found on most os we can also specify
+        non standard custom web fonts for use on our website
+        -google font library{
+            google fonts is free library of web 
+            fonts that you can use in your css by referncing 
+            the font url
+            google font will direct you how to use thesame
+            <link>->when using link it should be obove the style elements
+            then check how google wants you to write the font-famil:family_name,generic_name;
+
+        }
+    }
+    specify how fonts should degrade{
+        when a font is not available you can tell the browser 
+        to degrade to another font
+        for example if you wanted an element to use 
+        the Helvitica font but degraade to san-serif  font
+        when Helvitica is not available
+
+        p{
+            font-family:Helvitica,sans-serif;
+        }
+
+    }
+    size image{
+        css has aproperty called width that controls
+        an elements width just like font we will 
+        use px to specify the image width
+        eg->craete a class large-image that gave htmlelements
+        a width with of 500px
+    }
+    add border around your element{
+        css border have properties like style,color and width
+        you can apply mmultiple classes to an element using 
+        its class attribute by sepaerating each class name with 
+        space eg<img "class1 class2">
+    }
+    Add rounded corners with borderradius{
+        AN image can have sharp corners we can round out those 
+        corners with a css property called [border-radius]
+        One can specify it pixels 
+        border-radius can be specified using px or precentage
+        border-radius:10px;
+        border-radius:50%;//this makes the image more circular
+    }
+    Give a backgraound color to a Div element{
+        use the background-color property
+        one can create a class 
+        div is used inroder to format a particular section of the page 
+    }
+    set the id of an element{
+        each html element can have an id attribute
+        benefits of using id attribute{
+            you can have an id to style a single 
+            element and later you will learn that you can use them to select 
+            and modify specific element withJS 
+
+        }
+        use id element attribute to style an element {
+            one cool thing about id attribute is that like classes you can 
+            style them using css
+            however an id is not reusable 
+            an  id has a higher importannce than a class 
+            so if both are applied to the same element and have 
+            conflicting styles the styles of the id will be applied
+            use the id in the style eg{
+                #cat-photo-element{
+                    backgraound-color:green;
+                }
+                when using classes a period is used or [.]
+                but when using id of an element you will use 
+                #id{
+
+                }
+
+            }
+        }
+        adjust the padding of an element{
+            all html elements are essentially little rectangles 
+            Three imortant properties control the space that 
+            surrounds each html element :{
+                -padding
+                -border
+                -margin
+            }
+        }
+        add a negative margine to an element{
+            an element margin controls the amount
+            of space between an element border and 
+            surrounding elements
+            if you set an element margin to negative 
+            the element will grow larger and if
+            the margin is positive it will grow smaller
+        }
+        add different padding to each side of an element{
+            some times one needs to customize an
+            element so that it has different amounts of
+            padding on each of its sides 
+            css allows one to controll all the four sides 
+            of an element with{
+                -padding-top
+                -padding-right
+                -padding-bottom
+                -padding-left
+
+            }
+        }
+        add different margins to each side of an element{
+            some times you would want to customize an element 
+            so that it has a different margin on each of its sides
+            css allows you to control the amargin of all foursides 
+            of an element {
+                -margin-top
+                -margin-right
+                -margin-bottom
+                -margin-left
+            }
+        }
+        use clock wise notatiion to specify the padding of an elemnt{
+            instead of specifying an element padding-top,padding-bottom.....etc
+            you can specify them in one line 
+            eg padding:10px 20px 10px 20px;
+            these four values work like a clock top,right,bottom,left
+
+        }
+        use clockwise notation to specify the margin of an element{
+            intead of using margin-top etc
+            just use margin:10px 20px 10px 20px
+            the four values move in a clockwise fashion
+        }
+        use attributes selectors to style elements{
+            we have used id or class attributes to elemets that 
+            you wish to specify style
+            thereare othercss selectors you can use to select 
+            custom groups of elemets to style
+            -we can use attributes eg [attribute=value]
+            attributes selectors to style the check box 
+            -THis selectors matches and styles elements 
+            with specific attribute value for example the 
+            below changes margins of all elements with 
+            the attribute type and a corresponding value radio
+            [type='radio']{
+                margin:20px 0px 20px;
+            }
+
+        }
+        understand absolute versus relative units{
+            pixels are type of lenghth unit which is what tells
+            the browser how to size or space an item 
+            in addition to px css has many different length units 
+            options that one can use 
+            -in for inches 
+            -mm for milimeters
+            relative units such as em or rem
+            em is based on the elements font 
+            you van use it to set the font size
+        }
+        style the HTML body ekement {
+            the body element ca be manipulated 
+            background-color:color
+
+        }
+        inherit styles from the body element{
+            <style>
+                body {
+                background-color: black;
+                color:green;
+                font-family:monospace;
+            }
+
+            </style>
+            <h1>Hello World</h1>
+        }
+        prioritize one style over another {
+            sometimes your html elements will recieve 
+            multiple styles that conflict with one another
+            for example your h1 element cant be both green 
+            and pink at the same time 
+
+            if body has a different color for text and a specific
+            element has a class that styles with  a different color 
+            the color for body willl be overwritten
+            eg{
+                  <style>
+                body {
+                background-color: black;
+                color:green;
+                font-family:monospace;
+                .pink-text{
+                    color:pink;
+                }
+            }
+
+            </style>
+            <h1 class="pink-text">Hello World</h1>
+            }
+
+        }
+        override styles in subsequent css{
+            -our classes will over ride the body 
+            element 
+            -what about we have two classes in one element
+            the second class will over riide the second one 
+            The browser reads css from top to bottom
+            hence style declaration from the bottom will 
+            over ride the top incase of conflict 
+            using id attribute overide almost all
+            using inline style overides all again plus id
+            to over ride all styles use important
+        }
+        over ride all other styles by using important {
+            this is the most important an powerfull wa to 
+            over ride 
+            Why you should over ride {
+                in many cases you will use css libraries 
+                this may accidentally overide your own cssso when
+                so when you want too be sure you can use 
+                
+                !important 
+            }
+        }
+        use CSS variables to change several elements at once{
+            css vaibles are a powerful way to change 
+            many css style properties at once by canging 
+            only one value 
+        }
+
+    }
+}

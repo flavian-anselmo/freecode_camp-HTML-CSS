@@ -1,0 +1,65 @@
+<style>
+    .full-card{
+        background-color: rgb(202, 241, 247);
+        border-radius: 4%;
+        width: 245px;
+        /*           x    y   blur spread color inset    */
+        box-shadow: 0px 0px 20px  20px black  inset ,30px 30px 20px black ;
+        /*percenatge does not not work with box-shadow*/
+        opacity: 0.7;
+    }
+    .card-content{
+        margin: 20px 10px 20px 10px;
+        font-style: italic;/*used to italisize the text
+                             or use the em tag*/
+    }
+    .card-text{
+        color: black;
+    }
+    .card-links{
+        margin: 0px 20px;
+        text-align: left;
+    }
+    h4{
+        text-align: center;
+        padding: 10px;
+        text-decoration: underline;/*used to under line the text*/
+        text-decoration: line-through;/*use to strike text one can use s tag*/
+        background-color: rgba(45, 45, 45, 0.1);
+        border-radius: 5px;
+        font-size: 50px;
+        text-transform:uppercase;/*change to upper case */
+
+    }
+    p{
+        text-align: justify;
+        font-size: 15px;
+        line-height: 1.5;/*vertical space btwn lines*/
+    }
+    .links{
+        opacity:0.5;/*make transparency*/
+    }
+    .line{
+        box-shadow:0px 0px 40px 10px  rgb(253, 252, 252);
+    }
+</style>
+
+<div class="full-card">
+    <!--container for the full card-->
+    <div class="card-content">
+        <!--content in the card-->
+        <div class="card-text">
+            <h4>Google</h4>
+            <hr class="line"><!--horizontal line is drawn-->
+            <p>Google was founded by Larry Page 
+                and Sergey Brin while they were <u>Ph.D. students</u> 
+                 at <strong>Stanford University</strong>.
+            </p>
+        </div>
+        <div class="card-links">
+            <a  class="links" href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank">Larry_Page</a>
+            <a class="links" href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank">Sergey_Brin</a>
+        </div>
+        <!--end of content-->
+    </div>
+</div>

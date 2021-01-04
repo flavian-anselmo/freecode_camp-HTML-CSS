@@ -1,0 +1,390 @@
+<!---FREE CODE CAMP TUTORILAS -->
+<!DOCTYPE HTML5>
+<html>
+    <head>
+        <title>
+            CatPhotoApp
+        </title>
+    </head>
+    <body>
+        <div class="header-color"><h2 id="cat-phot-APP" class="blue-text">CatPhotoApp</h2></div>
+        <main>
+            <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute cat" class="image thick-green-border">
+            <a href="#">
+                <img src="https://s3.amazonaws.com/freecodecamp/running-cats.jpg" alt="Cute Cats" class="image thick-green-border">
+            </a>
+            <a href="#footer">
+                Jump to Bottom
+            </a>
+            <p>
+                view more
+                <a target="_blank" href="https://freecatphotoapp.com">
+                    cat photos
+                </a>
+            </p>
+        <p id ="paragraph1" class="blue-text">
+            Kitty ipsum dolor sit amet, 
+            shed everywhere shed everywhere
+            stretching attack your ankles 
+            chase the red dot, 
+            hairball run catnip eat the grass sniff.
+        </p>
+        <p id="paragraph2">
+            Purr jump eat the grass rip the couch scratched sunbathe,
+            shed everywhere rip the couch sleep 
+            in the sink fluffy fur catnip scratched.
+        </p>
+        <!--div is a generic container for flow content
+            it has no effect on the content or layout 
+                until styled in some way using css
+            -it is used to group content so it can be easily styled 
+            class or id attributes   -->
+        <div class="silver-background">
+                <p id="paragraph3">
+                    cats like the following:
+                    <ul>
+                        <!--this will create a bulleted list-->
+                        <li>milk</li>
+                        <li>cheese</li>
+                    </ul>
+                    <p id="paragraph5"> names of Cats</p> 
+                    <ol>
+                        <!--this will create an  ordered list-->
+                        <li>Garfield</li>
+                        <li>Sylvester</li>
+                    </ol>
+
+                </p>
+                <p id="paragraph4">Top 3 things cats hate:</p>
+                    <ol>
+                        <li>water</li>
+                        <li>dogs</li>
+                        <li>cold</li> 
+                </ol>
+            </div>    
+            <!--the input box is nested in form element ...the action specifies 
+            the data eneterd in the input element can be submitted -->
+            <form id="cat-photo-form" action="https://freecatphotoapp.com/submit-cat-photo">  
+                <!--used to get text from the user-->
+                <input type="text" placeholder="my input box" required>
+                <!--this button will submit what the user inputs using the url in action-->
+                <button type="submit">
+                    submit
+                </button><br>
+                <!--every radio buttton in its own lable
+                the radio buttons share the same name indoor-outdoor
+                they have two id indoor and outdoor -->
+                <p>radio buttons <br>
+                    <label for="indoor">
+                        <input id="indoor" type="radio"  value="indoor"name="indoor-outdoor" checked>indoor
+                    </label><br>
+                    <label for="outdoor">
+                        <input id="outdoor" type="radio" value="outdoor" name="indoor-outdoor">outdoor
+                    </label><br>
+                </p>
+                <p>checkboxes <br>
+                    <label for="loving">
+                        <input type="checkbox" id="loving" value="loving" name="personality" checked>loving
+                    </label><br>
+                    <label for="honest">
+                        <input type="checkbox"  id="honest" value="honest" name="personality">honest
+                    </label><br>
+                    <label for="faithful">
+                        <input type="checkbox" id="faithful" value="faithful" name="personality">faithful
+                    </label>
+                </p>
+
+            </form> 
+        <footer id="footer">
+            freecodecamp
+        </footer>
+        <!--use the style element to add css 
+        to the hml the below code turn the h2 to 
+        a diffrent color-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <style>
+            .blue-text{
+                color: rgb(51, 206, 21);
+                font-family:"Dancing Script",cursive;
+            }
+            p{
+                color:rgb(190, 31, 230);
+                font-size: 16px;
+            }
+            .image{
+                width: 500px;
+            }
+            .thick-green-border{
+                border-color: green;
+                border-style: solid;
+                border-width: 10px;
+                border-radius: 50%;
+
+            }
+            .header-color{
+                background-color:darkolivegreen;
+            }
+            .silver-background{
+                background-color:silver;
+            }
+            #paragraph1{
+                color:rgb(51, 206, 21);
+            }
+            #paragraph2{
+                color: rgb(21, 200, 206);
+            }
+            #paragraph3{
+                color: rgb(228, 29, 152);
+            }
+            #paragraph4{
+                color: rgb(71, 23, 110);
+            }
+            #paragraph5{
+                color: tomato;
+            }
+            #cat-photo-form{
+                background-color: green;
+                
+            }
+            [type='checkbox']{
+                margin: 10px 0px 15px 0px;
+               
+            }
+            body{
+                background-color: rgb(44, 43, 41);
+            }
+            #cat-phot-APP{
+                text-align: center;
+                border-radius: 10px;
+            }
+            #footer{
+                text-align: center;
+                color: darksalmon;
+            }
+
+        </style>
+
+        </main>
+    </body>
+</html>
+<!--
+    this is used for commmenting in html
+    <h2>this are headings in html
+
+    </h2>
+    <p>
+        used to create paragraphs 
+    </p>
+    HTML5 introduces more descriptive HTML tags
+    they include{
+        -main
+        -header
+        -footer
+        -nav
+        -video
+        -article
+        -section
+    }
+    -MAIN
+    {
+        HTML5 TAGS help search engines 
+        and other developres find the main
+        content of your page
+        <main> 
+            <h1>Hello World</h1>
+            <p>Hello Paragraph</p>
+        </main>
+        the main element with two child 
+        elements nested inside it
+    }
+    {
+        Adding images ---
+        you can add images to websites 
+        using the img element 
+        and point to a specific image URL using the (src)
+        attribute
+        -The Img element is a selfclosing tag
+        -All img elements must have an alt attribute 
+        the next inside an alt attribute is used for screen readers 
+        to improve accessibility and is displayed if the image fails
+        to load 
+        -If the image is purely decorative using an empty alt
+        attribute is abest practice
+        Ideally the alt attribute should not contain speacial characters 
+        unless needed
+
+    }
+    {
+        You can use a (anchor) elemt to link to content outside
+        ypor ebsite
+        a lelement needs a destination web adress called href
+        attribute
+        <a href="link">cat photos<a/>
+        a can also be used to craete internal 
+        links to jump to diffrent sections within
+        webpages 
+        To create an internal links href attribute
+        has a hash symbol # plus the id attribute
+        for the elements that you want to internally 
+        link to    
+        example{
+            <a href="#contacts-header">Contacts</a>
+...
+            <h2 id="contacts-header">Contacts</h2>
+
+        }
+        You can nest links wihthin other text elemennts
+        <p>
+            Here's a <a target="_blank" href="http://freecodecamp.org"> link to freecodecamp.org</a> for you to follow.
+        </p>
+        targetattribute{
+            _blank-opens the link doc in new windowo
+            _self-opens the link doc in the same frame 
+            as it was clicked 
+            _parent-opens the link doc in the parane frame
+            _top opens the link in the full body of the window
+
+        }
+        image as link{
+            you can make elements into links by nesting
+            by nesting them within a element 
+            <a href="#"><img src="https://bit.ly/fcc-running-cats"
+            alt="Three kittens running towards the camera."></a>    
+            use # to make it a dead link
+
+        
+        }
+        Bulleted unordered list{
+            html has a special element for creating unordered list
+            or bulleted point style list
+            unordered list start with <ul>
+                                            <li>item1</>
+                                            <li>item2</li>    
+                                    </ul>
+        }
+        ordered list{
+            ordered list start with an opening <ol>element
+                <ol>
+                    <li>item</li>
+                </ol>    
+        }
+        Text field{
+            input elements are convinient way to get inputs from 
+            the user
+            syntax:<input type="text">
+                -text
+                -checkbox
+                -radio
+                -button
+
+            input element is a self clossing 
+            -place holder to text field 
+                place holder is what is displayed in your 
+                input element before your user has inputted 
+                anything
+                <input-"text" placeholder="input box">
+                You can require specific form fields so that 
+                your user will not be able to submit your form
+                until he or she has filled them out 
+                for example if you want a text input
+                field you can just addthe attribute [required]
+                within your input element 
+                <input type="text" required>
+        }
+        HTML FORMS{
+            YOU CAN BUILD web forms that actually submit 
+            data to server using nothing more than pure 
+            HTML you can do this by specifying an action 
+            on your form
+            <form action="url where to submiit form data databse">
+            <form/>
+        }  
+        Buttons{
+            lets add a submit button to your form click this button
+            to send data from your form to the url you specified with 
+            your forms action attribute
+            <button type="submit">this button submits the form</button
+            if a type is not specified the button will have 
+            a default value choosen by your user agent    
+            }  
+        Create a set of Radio Buttons{
+            you can use radio buttons for questions
+            where you want the user to only give
+            you one answer
+            Radio buttons aretype of input 
+            -Each of your radio button can be 
+            nested within its own label element 
+            by wrapping an input element inside
+            of a label element it will autimatically associate
+            the radio button input within the label element
+            -Al radio buttons should have the same name attribute
+            to create a radio button group
+            By creating a radio group selecting any 
+            single radio button will automatically deselect 
+            the other button within the same group ensuring 
+            only one answer is provided by the user
+            <label for ="indoor">
+                <input tye="radio" name ="indoor-radio">
+                    indoor
+            </label> 
+            its good practice to set a for attribute on the element
+            one should have the option of indoor and the other 
+            should have the option of out dooor
+            BOTHR   
+
+        }  
+        checkboxes{
+           Each of your check boxes can be nested in there own labels
+           input type checkbox
+           All related checkboxes should have the same name attribute
+           
+           it is best practice to explicitly define the relation ship 
+           between a checkbox input and its corresponding label by setting
+           the [for] attribute on the label element to match the [id] attribute
+
+        }
+        value attribute in checkboxes and radio{
+            when a form gets submitted the data is sent to the server
+            and includes entries for the option selected 
+            Inputs types of radio and checkboxreport their values from the value
+            attribute
+            <label for ="indoor">
+                <input id="indoor" value="indoor" type="radio" name="indoor-outdoor">indoor
+            </label>  
+            
+            <label for ="outdoor">
+                <input id="outdoor" value="outdoor" type="radio" name="outdoor-outdoor">outdoor
+            </label> 
+            here you have two rdaio button inputd  Wheb the user submits 
+            the form with inddoor option selected the form data will include the 
+            line indoor-outdoor=indoor this is form the name attribute and 
+            value attribute
+            if value attribute is ommitted the submitted form data uses the default
+            value which is [on] hence the name will be set to indoor-outdoor=on
+            which is not usefull hence the value attribute needs to be set
+            to something to identify the option 
+        }  
+        check box or radio button by default using checked {
+            to do this just add the word checked to the inside ofan 
+            input element eg{
+                <input type="radio" name="test-name" checked >
+            }
+        }    
+        nest many elements within a single div element{
+            the div element alaso known as didvision element is  a general
+            purspose element container for other element
+            The div is probably the most commonly used HTML ELEMENT OF ALL
+            its a nono self clossing element 
+            open{
+                <div>
+            }close{
+            </div>
+            }
+        }
+        CSS{
+
+        }
+
+    }
+-->

@@ -1,0 +1,37 @@
+<style>
+    
+    body {
+      background-color: black;
+      font-family: monospace;
+      color: green;
+    }
+    .blue-text{
+      color:blue;
+    }
+    .pink-text {
+      color: pink !important ;
+    }
+    .blue-text{
+      color:blue;
+    }
+    #orange-text{
+        color:orange;
+    }
+    
+  </style>
+  <h1 style=color:white; id="orange-text" class="pink-text blue-text">Hello World!</h1>
+   <!--thebody elements will be over riden 
+    by the pink then the class pink-textt will be overflow: 
+    by the #blue-text classs
+    but if pink is below blue .pink will override blue
+    The browser reads CSS from top to bottom in order 
+    of declaration that means that if there is there 
+    ia a conflict the browser will use whichever css declaration
+    that comes last 
+    id declarations will override the class whichever 
+    palce they are declared in the css file one can also
+    over ride everry thing with the inline style in the
+    specific element  
+    -->
+    <!--over ride all otherstyles with important
+        if you specify imprtant it over rides all -->

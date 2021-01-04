@@ -1,0 +1,27 @@
+<!--
+    when working with css you will likely run 
+    into compatin=bility issues at the same ppoint 
+    this is why it is important to provide 
+    browser fallback to avoid potential problems
+    when your browser parses tthe css of a webpage
+    it ignores any properties that it doesnt 
+    recogonise or support for example{
+        if you use a css variable to assign a bbackground color
+        on a site eg internet explorer will ignore 
+        the background color bbecause it does not support csss
+        variables 
+    }
+-->
+<style>
+    :root {
+      --red-color: red;
+    }
+    .red-box {
+
+        background: red;
+        background: var(--red-color);
+        height: 200px;
+        width:200px;
+    }
+  </style>
+  <div class="red-box"></div>

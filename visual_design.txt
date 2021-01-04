@@ -1,0 +1,159 @@
+visual design combines
+    -typograpghy
+    -color theory
+    -graphics
+    -animation
+    -page_layout
+create visual balance  using the text align property{
+    this section is focued on applied visual
+    design 
+    text is often a large part of web content
+    css has several options for how to alighn it 
+    with text-align property
+    eg:
+        -text-align:justify;
+        
+        -text-align:center;
+        
+        -text-align:right;
+        
+        -text-align:left;
+}
+adjust the width of an element using the width property{
+    you can specify the width of an element 
+    using the eidth property
+    values can be given in relative length units
+    absolute value like px
+    or precentage 
+    eg img{
+        width:220px;
+    }
+} 
+adjust the heigth of an element using the height property{
+    specify the heigt of an element using 
+    the height  property in css 
+    img{
+        height:20px;
+    }
+} 
+use the strong tag to make text bold{
+    to make text bold use the strong tag
+    this is often used to draw attention 
+    to text and symbolize that is importance 
+    with the strong tag the browser applies 
+    the  css font-weight:bold; to element 
+}
+use the u tag to underline text{
+    to underline text you can use u tag this signifies that the text is important
+    with the u tag css uses the  text-decoration:underline;
+}
+use the em tag to italicize {
+    to emphasize text you can use the em tag or
+    in css use the font-style:italic;
+}
+use the s tag to strike through text{
+    use text-decoration:line-through;
+    or use the s tag
+    it shows a text is not valid 
+}
+create a horizintal line using hr element{
+    use hr tag to add a horizontal line across 
+    the width of its containing element 
+    This can be used to define an end of topic
+    hr->this is a self closing tag
+}
+adjust the background-color property of text{
+    instead of adjusting your overall background 
+    instead of adjuasting your overallbackground or the
+    color of the text to make the foreground easily 
+    readable you can add a background-color to the element 
+    holding the text you want to emphasize this challenge uses 
+    rgba() instead of rgb() and hex code
+        -r->red
+        -g->green
+        -b->blue
+        -a->alpha
+}
+adjust size of header versus paragrapgh{
+    add abox shadow to a card like lement 
+    the box-shadow property applies one or more
+    shadows to an element 
+    The shadow property takes values for:
+        -offset-x->how farto push  the shadow horizontally form the element
+        -offset-y->how farto push the shadow vertically form the element
+        -blur-radius,spread-radius values are optional
+
+}
+decreasethe opacity of an element{
+    The opacity property in CSS is used to adjust the opacity,
+     or conversely, the transparency for an item
+     value 1->opeque
+     value 0.5->transparent
+     value 0->completely transparent
+}
+use the text-transform property to make text upper case{
+    the text-transform property in css is used to change
+    the appearence of text it is a convinient way to make 
+    sure text on a webpage appears consistently without 
+    having to change the text content of the actual HTML
+    ELEMENTS 
+        -Lowercase=small letters
+        -uppercase=capital
+        -capitalize=the fist letter is capitalised 
+        -initial=default value
+        -inherit=use the text-transform value form parent element
+        -none=original text
+
+}
+set the font size to multiple heading elements{
+    the font-size is used to specify how large 
+    the text is inn a given element 
+    this an be used to create visual consistency
+    font-size:68px
+    font-weight:800;
+    generally font-sizecan be applied to elements with text
+}
+set the line height of paragraph{
+    css offers line-height property 
+    to change the height of each line 
+    in a block of text 
+    As the name suggests it changes the vertical space 
+    that each line of text gets 
+}
+adjust the hover state of a tag{
+    changes the color when the mouse 
+    pointer is over the specified text
+}
+change an element relative position{
+    css treats aech element as its own box
+    which is usually referred to as the css
+    box model 
+    -When the position of an elementis set
+    to relative it allows one to specify 
+    how css should move it relative to its 
+    current position in the noemal flow of the
+    page.it pairs with the css properties of 
+    left right and top or bottom 
+    this specifies how manu pixels /percentage 
+    to move the item away from where it is 
+    noemally positioned 
+}
+move a relative position element with css offset {
+    The CSS offsets of top or bottom, 
+    and left or right tell the browser 
+    how far to offset an item relative 
+    to where it would sit in the normal 
+    flow of the document. You're offsetting 
+    an element away from a given spot, which 
+    moves the element away from the referenced 
+    side (effectively, the opposite direction). 
+    As you saw in the last challenge, using the
+     top offset moved the h2 downwards. Likewise, 
+     using a left 
+    offset moves an item to the right.
+}
+lock an element to its parent with absolute{
+    the next option of css position is absolute 
+    which locks the elements in place relative 
+    to its parent container 
+}

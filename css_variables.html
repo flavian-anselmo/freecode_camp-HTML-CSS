@@ -1,0 +1,85 @@
+<header id="main-header">
+    <h1>CSS Variables</h1>
+  </header>
+  
+  <div class="container">
+    <div class="grid">
+      <div class="box">
+        <h1>Hello World</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod ullam necessitatibus itaque quisquam incidunt obcaecati temporibus sint nulla exercitationem.</p>
+      </div>
+      <div class="box">
+        <h1>Hello World</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quod ullam necessitatibus itaque quisquam incidunt obcaecati temporibus sint nulla exercitationem.</p>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+      :root{
+          /*
+          syntax for declaring variables
+          --var_name:color;
+          helps us access variables dynamically
+          in css to JS
+
+          */
+          --main-bg-color:white;
+          --main-text-color:#333;
+          --container-width:90;
+          --header-bg-color:rgb(47, 16, 223);
+          --header-txt-color:rgb(151, 79, 79);
+      }
+      body{
+          /*
+          access the variables form any where
+
+          */
+          margin:0;
+          padding:0;
+          line-height: 1.5;
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: var(--main-bg-color);
+          color: var(--main-text-color);
+
+      }
+      .container{
+          width: var(--container-width);
+          margin: 20px auto;
+
+      }
+      #main-header{
+          background-color: var(--header-bg-color);
+          color:var(--header-txt-color);
+          text-align: center;
+          padding:0;
+          margin: 0;
+
+      }
+      .grid{
+          display:grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 20px;
+          align-items: center;
+      }
+      .box{
+          /*box variables
+          the scope of this variables 
+          is in the box class*/
+          --box-bg-color:#ddd;
+          --box-main-color:#06c;
+          --box-pad:5px 10px;
+      }
+      .box{
+          background-color: var(--box-bg-color);
+          padding: var(--box-pad);
+          border: 1px solid var(--box-main-color);
+      }
+      /*the below code will not work since
+      it is not in the box class*/
+      .main-header{
+          color:var(--box-main-color);
+      }
+
+
+  </style>
