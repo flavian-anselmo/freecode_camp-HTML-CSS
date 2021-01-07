@@ -1,0 +1,39 @@
+<style>
+    #searchbar {
+        position: absolute;
+        top: 50px;
+        right: 50px; 
+  
+    }
+    section {
+      position: relative;
+      
+    }
+    p{
+        background:repeating-linear-gradient(
+        45deg,
+        yellow 0px,
+        yellow 40px,
+        black 40px,
+        black 80px
+        );
+    }    
+  </style>
+  <body>
+    <h1>Welcome!</h1>
+    <section>
+      <form id="searchbar">
+        <label for="search">Search:</label>
+        <input type="search" id="search" name="search">
+        <input type="submit" name="submit" value="Go!">
+        <p>hello</p>
+      </form>
+    </section>
+  </body>
+  <!--
+      the other position property 
+      is absolute which locks the
+      elements in place relative 
+      to its parent contaiver
+
+  -->

@@ -1,0 +1,56 @@
+<style>
+    .ball {
+      width: 40px;
+      height: 40px;
+      margin: 50 auto;
+      position: fixed;
+      background: repeating-linear-gradient(
+        35deg,
+        #ccffff,
+        #ffcccc
+      );
+      border-radius: 50%;
+    }
+    #ball1 {
+      left: 20%;
+      transform:scale(1.5);
+    }
+    #ball1:hover{
+        transform: scale(3);
+    }
+    #ball2 {
+      left: 65%;
+      transform:scale(1.5);
+      /*the original times 1.5*/
+  
+    }
+    #ball2:hover{
+        transform: scale(3);
+        /*chanes the size of element
+        once the poiner is on the element*/
+    }
+    .box{
+        width: 70%;
+        height: 100px;
+        margin:  50px auto;
+        position:relative;
+        top:100px;
+        background: linear-gradient(
+        53deg,
+        #ccfffc,
+        #ffcccf
+        );
+    }
+    .box:hover{
+        transform: skewy(25deg);
+        transform: skewY(50deg);
+        
+    }
+
+  
+  
+  </style>
+  
+  <div class="ball" id= "ball1"></div>
+  <div class="ball" id= "ball2"></div>
+  <div class="box"></div>
