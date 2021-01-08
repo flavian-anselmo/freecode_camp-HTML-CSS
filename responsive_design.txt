@@ -1,0 +1,73 @@
+Today they are many types of devices 
+that can acces the web ,,phones,desktops,tablets etc....
+these devices have diffrent screen sizes 
+ responsive web design is the appraoch of designing 
+ web content that respond to constraints o all 
+ devices ..the page structure and css rules should 
+ be flexible to accomodate these differences 
+ -if you expect the users to mobile users then take 
+ the a mobile first approach then add conditional rules
+ for large screen sizes ...this is called the mobile-first approach
+ and vice versa
+
+ create a media query{
+     media queries are a newtechnique introduced in css3
+     that change the presentation of content based on diffrent
+     view point sizes The view point is a user visible area 
+     of a webpage and is defferent depending on the device 
+     used to access the site 
+
+    -MEDIA queries consist of media type and if that media 
+    type matches the type of device the document is displyed 
+    on the styles are applied 
+
+    -for example when the  
+ } 
+ make image responsive{
+     img{
+         max-height:100%;
+         height:auto;
+     }
+     the max width of 100% will make sure 
+     the image is never wider than the container
+     the height of auto will make  the image keep its 
+     original aspect ratio
+ }
+ meta tag{
+     the view port is the visisble area of a web page
+     the viwe port varies with the device and will be '
+     smaller on a mobile phone than a computer screen
+     -html5 introduced a method to let web designers 
+     take control over the viewport through the <meta> tag
+     syntax{
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         -always include this to my web pages 
+         ->width=device-width->part sets the widthof the page
+                        to follow the screen-wdth of the device
+                        (varies depending with the device)
+        ->initial-scale=1.0->part sets the initial zoom
+                            level when the page first loads
+
+     }
+ }
+ use retina image for higher resolution display{
+     with  the increase internet connected devices
+     there specifications vary and the displays ythey 
+     use could be diffrent externally and internally 
+     -pixel density is an element that could be different
+     on one device form others this density is called 
+     pixel per inch
+     images that are not created with HD in mind
+     could look pixilated when rendered in HD
+     to make them visible in HD make the 
+     width and height half of what the original file has 
+     if img has 200px make the height and width 
+     half the value
+     img{
+         height:100px;
+         width:100px;
+     }
+ }
+ make typography responsive{
+     
+ }

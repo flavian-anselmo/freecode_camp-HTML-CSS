@@ -1,0 +1,213 @@
+Accessibility is basicaly having web content
+and a userinterface that can be understood 
+navigated aand interacted with by a brosd audience 
+    -this includes :
+        -visual,auditory,mobility,and cognitive disabilities 
+-here i will learn how to:
+    -create an easily navigated page that is keyboard friendly
+    -ensure text alternativeness exist for non text and visual content
+    -have well organised code thet uses appropriate markup
+ add a text alternative to image for visual impared accessibility{
+     its likely that you have seen the alt attribute
+     on an image tag ...alt describes the content of the amage 
+     This helps in cases where the image fails to load 
+
+     syntax:<img src="link.jpg" alt="logo">
+     pple with visual impairments rely on 
+     screen readers to convert web content to audio 
+     interface 
+ }           
+know when the alt text should be left balnk{
+    in situations when the image is already 
+    explained with text content or does not
+    add meaning to the page the img still needs 
+    an alt but it can be st to empty
+
+} 
+use heading to show hierachical relationship of content{
+    headings h1-h6 are workhorse tags that help 
+    provide structure and labeling to your content
+    screen readers 
+    inshort use different heading to avoid cofusion
+    ->h1 should only be one
+}
+jumo straight to the content using main element{
+    html5 introduced a number if new elements 
+    that give developers more options while also
+    incoperating  feartures these tags are :
+            -footer
+            -nav
+            -article
+            -section
+}
+by default the browser wil render this elements 
+similar to <div>
+The tag name can can indicate the type of information
+it contains which adds semantic meaning to that content 
+<main>->should have the main content of the page
+
+wrap text in the article element{
+    <article>->this is a section element and is used 
+    to wrap indeendent self contained content
+    this tag works well with blog entries
+    forum posts and new artiicles 
+    article is for stand alone content
+    -section is for grouping thematically related content
+    for example if a book is an article then each chapter
+    is an a section
+
+    div->group content
+    section->group related content
+    article->self contained content
+}
+
+make screen reader navigation easier with the header landmark{
+    header araps introductory info
+    header is meant to be used inn the body
+
+
+}
+the nav landmark{
+    nav element is another html5 item with 
+    emebended landmark feature for easy screen reader
+    navis for navigation around the website
+    other links use the footer if the links are at the end of the website
+}
+
+the footer{
+    contains copyright information
+
+}
+
+improove accessibility of audio content with the audio element{
+    html5 element gives semantic meaning 
+    when it wraps sound or audio stream content 
+    in your markup
+    -the audio tag supports the control attributes 
+    teh browser default eg play pause  
+
+    <audio id="meowClip" controls>
+        <source src="audio/meow.mp3" type="audio/mpeg" />
+        <source src="audio/meow.ogg" type="audio/ogg" />
+    </audio>
+    multimedia content ususally has both visual and auditory
+    components ...it needs synchronised captiion 
+    and a transcript so users with visual
+    and auditory impairedness can access it 
+    The control attribute provides capabilities such as 
+    pause play ...volume etc.....
+}
+improve chart accessibility with the figure element{
+    html5 introduces [figure] element along with the related [figcaption]
+    used together ,these items wrap a visual representation like img diagram
+    or chart along with its caption 
+    the figcaption goes inside the figure tags and can be combined 
+    with other elements 
+
+    <figure>
+        <img src="roundhouseDestruction.jpeg" alt="Photo of Camper Cat executing a roundhouse kick">
+        <br>
+        <figcaption>
+             Master Camper Cat demonstrates proper form of a roundhouse kick.
+        </figcaption>
+    </figure>
+}
+improve form accebility with the label element{
+    label tag wraps the text for a specific form controlitem 
+    usually the name or label for choice this ties meaning to the item 
+    and makes the form more readable 
+    the for attribute on a label tags explicitly
+    associatesb that label with the form control and is used screenreaders 
+    the for and id should be same 
+
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+    </form>
+}
+wrap radio buttons in a field set element for better accebility{
+    each choice isgiven a label with for attribute tying with id
+    but since radio buttons often come in a group where the user 
+
+    must choose one ..there is a way to semantically show 
+    the choices are a part of a set
+    -the fieldset tag suorrounds the entire grouping
+    of radio buttons to achieve this 
+    it often uses a legend tag to provide a description 
+    for the grouping which is read by screen readers 
+
+    <form>
+        <fieldset>
+        <!--legend provides description 
+            for the buttons the fieldset
+            decribes that the buttons belong
+            to one set-->
+            <legend>Choose one of these three items:</legend>
+            <input id="one" type="radio" name="items" value="one">
+            <label for="one">Choice One</label><br>
+            <input id="two" type="radio" name="items" value="two">
+            <label for="two">Choice Two</label><br>
+            <input id="three" type="radio" name="items" value="three">
+            <label for="three">Choice Three</label>
+        </fieldset>
+    </form>
+
+}
+add an accessible date picker{
+    forms often include the input field
+    which can be used to create several 
+    different form controls 
+    one can create a date picker using 
+    the input element
+
+    <label for="input1">Enter a date:</label>
+    <input type="date" id="input1" name="input1">
+    -html5 introduces the time element 
+    along with a datetime attribute to standardize 
+    times .this is an inline element that can wrap 
+    a date or time on a page 
+    A valid format of that date is held by datetime
+    attribute 
+
+
+}
+{
+    when creating links make it descriptive 
+    so that screen readers can know wjat the thw link is all about
+}
+make links navigable with html accesskeys{
+    html offers the acccess keys attributes to specify a shortcut to activate 
+    or bring focus to an element 
+    this can make navigation more efficient for keyboard only users 
+
+    <button accesskey="b">Important Button</button>
+
+    the buuton can be accessed by pressing enter
+}
+use tabindex to add keyboard focus to element{
+    tabindex has three distinct functions
+    relating to an element keyboard focus 
+    this functionality can be given
+    to elements such as div span and p
+    by placing a tabindex ="0"
+
+    <div tabindex="0">I need keyboard focus!</div>
+
+    allows the user to tab through the page form the first 
+    part that has been set with tabindex
+
+    tabindex also allows as to use the focus psuedo-element 
+    p:focus{
+        background-color:yellow;
+        /*this will highlight the part with yelllow 
+        the part that has the tab index*/
+    }
+
+    the focus of keyboard for several elements can be specified 
+
+    <div tabindex="1">I get keyboard focus, and I get it first!</div>
+
+    <div tabindex="2">I get keyboard focus, and I get it second!</div>
+
+
+}
