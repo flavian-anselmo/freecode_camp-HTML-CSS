@@ -252,6 +252,10 @@ fonts{
                 so when you want too be sure you can use 
                 
                 !important 
+                
+                 .pink-text {
+                    color: pink !important;
+                 }
             }
         }
         use CSS variables to change several elements at once{
